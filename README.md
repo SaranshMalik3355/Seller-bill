@@ -15,7 +15,7 @@ This project simulates a small shop system with:
 💰 ₹ currency formatting
 
 🚀 Features
-1️⃣ Inventory Management
+📦 Inventory Management
 
 Add new items with price
 
@@ -25,7 +25,9 @@ Input validation for price
 
 Command-based interaction (add, remove, exit)
 
-2️⃣ Billing System
+Prevents invalid inputs
+
+🧾 Billing System
 
 Add multiple products to cart
 
@@ -41,8 +43,7 @@ Professionally formatted invoice output
 
 Grand total calculation
 
-Example Output:
-
+Example Invoice Output
 ---------------------------------------------------------------------------
 Product Name           Quantity        Unit Price         Line Total
 ---------------------------------------------------------------------------
@@ -51,7 +52,7 @@ Register                    1            ₹ 50.00            ₹ 50.00
 ---------------------------------------------------------------------------
 Total Amount                                  ₹ 90.00
 ---------------------------------------------------------------------------
-3️⃣ Calculator Module
+🧮 Calculator Module
 
 Supports:
 
@@ -69,7 +70,7 @@ Includes:
 
 Float support
 
-Zero division protection
+Division-by-zero protection
 
 Modulo-by-zero protection
 
@@ -91,21 +92,30 @@ Input Validation & Error Handling
 
 Each module operates independently and returns cleanly to the main controller.
 
-📂 Project Structure
+🏗 Project Structure
 main()
  ├── inventory_management()
  ├── generate_bill()
  └── calculator()
 ▶️ How to Run
+Requirements
 
-Make sure Python 3.10+ is installed (for match-case support).
+Python 3.10 or above (required for match-case)
 
-Clone the repository.
+Steps
 
-Run:
+Clone the repository:
 
-python your_file_name.py
-📈 Future Improvements (Planned)
+git clone https://github.com/your-username/your-repo-name.git
+
+Navigate to the project folder:
+
+cd your-repo-name
+
+Run the program:
+
+python filename.py
+📈 Future Improvements
 
 Add stock quantity tracking
 
@@ -117,11 +127,11 @@ Save bill to file
 
 Convert to OOP-based design
 
-Refactor repeated input validation into helper functions
+Refactor repeated input validation into reusable helper functions
 
-🏆 Learning Outcome
+🎯 Learning Outcomes
 
-This project helped practice:
+This project demonstrates:
 
 Structured CLI architecture
 
@@ -129,8 +139,12 @@ Clean control flow
 
 Data accumulation logic
 
-Formatting console output
+Console output formatting
 
 Proper scope handling
 
 Modular function design
+
+👨‍💻 Author
+
+Developed as a hands-on practice project to strengthen Python fundamentals and system design thinking. 
