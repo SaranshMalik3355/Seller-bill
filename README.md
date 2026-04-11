@@ -1,49 +1,41 @@
-🛒 Stationery Shop CLI Application
+# 🛒 Stationery Shop CLI Application
 
-A modular command-line based Stationery Shop Management System built in Python.
+> A modular command-line based **Stationery Shop Management System** built in Python — simulating a small shop with inventory control, billing, and a built-in calculator.
 
-This project simulates a small shop system with:
+---
 
-📦 Inventory Management
+## ✨ Overview
 
-🧾 Billing System with formatted invoice
+This project is a hands-on Python CLI application structured around clean, modular design. It covers three core subsystems:
 
-🧮 Built-in Calculator
+- 📦 **Inventory Management** — Add/remove items with validation
+- 🧾 **Billing System** — Cart, invoice generation, and ₹ currency formatting
+- 🧮 **Calculator** — Arithmetic operations with safe error handling
 
-🔒 Safe input handling & validation
+---
 
-💰 ₹ currency formatting
+## 🚀 Features
 
-🚀 Features
-📦 Inventory Management
+### 📦 Inventory Management
 
-Add new items with price
+- Add new items with name and price
+- Remove existing items by name
+- Input validation for price (no negatives or non-numeric values)
+- Command-based interaction: `add`, `remove`, `exit`
+- Prevents invalid or duplicate inputs
 
-Remove existing items
+### 🧾 Billing System
 
-Input validation for price
+- Add multiple products to a cart
+- Accumulates quantity if the same product is entered more than once
+- Validates product existence before adding to cart
+- Validates quantity input (positive integers only)
+- Professionally formatted invoice output with ₹ currency
+- Grand total calculation
 
-Command-based interaction (add, remove, exit)
+**Example Invoice Output:**
 
-Prevents invalid inputs
-
-🧾 Billing System
-
-Add multiple products to cart
-
-Accumulates quantity if product entered multiple times
-
-Validates product existence
-
-Validates quantity input
-
-Professionally formatted invoice output
-
-₹ currency formatting
-
-Grand total calculation
-
-Example Invoice Output
+```
 ---------------------------------------------------------------------------
 Product Name           Quantity        Unit Price         Line Total
 ---------------------------------------------------------------------------
@@ -52,99 +44,142 @@ Register                    1            ₹ 50.00            ₹ 50.00
 ---------------------------------------------------------------------------
 Total Amount                                  ₹ 90.00
 ---------------------------------------------------------------------------
-🧮 Calculator Module
+```
 
-Supports:
+### 🧮 Calculator Module
 
-Addition (+)
+Supports the following operations:
 
-Subtraction (-)
+| Operation      | Symbol |
+|----------------|--------|
+| Addition       | `+`    |
+| Subtraction    | `-`    |
+| Multiplication | `*`    |
+| Division       | `/`    |
+| Modulo         | `%`    |
 
-Multiplication (*)
+Safety features:
+- Float number support
+- Division-by-zero protection
+- Modulo-by-zero protection
+- Safe number input validation
+- Exit-based control flow
 
-Division (/)
+---
 
-Modulo (%)
+## 🧠 Design Principles
 
-Includes:
+| Principle                    | Description                                              |
+|-----------------------------|----------------------------------------------------------|
+| Separation of Concerns       | Each module handles one domain independently             |
+| Single Responsibility        | Each function does exactly one thing                     |
+| Modular Design               | Modules return cleanly to the main controller            |
+| Defensive Programming        | All inputs are validated before processing               |
+| Input Validation             | Clear error messages guide the user on invalid entries   |
 
-Float support
+---
 
-Division-by-zero protection
+## 🏗 Project Structure
 
-Modulo-by-zero protection
-
-Safe number validation
-
-Exit-based control
-
-🧠 Design Principles Used
-
-Separation of Concerns
-
-Single Responsibility Principle
-
-Modular Design
-
-Defensive Programming
-
-Input Validation & Error Handling
-
-Each module operates independently and returns cleanly to the main controller.
-
-🏗 Project Structure
+```
 main()
  ├── inventory_management()
  ├── generate_bill()
  └── calculator()
-▶️ How to Run
-Requirements
+```
 
-Python 3.10 or above (required for match-case)
+---
 
-Steps
+## ▶️ How to Run
 
-Clone the repository:
+### Requirements
 
-git clone https://github.com/your-username/your-repo-name.git
+- **Python 3.10+** (required for `match-case` syntax)
 
-Navigate to the project folder:
+### Steps
 
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/SaranshMalik3355/your-repo-name.git
+```
+
+2. **Navigate to the project folder:**
+
+```bash
 cd your-repo-name
+```
 
-Run the program:
+3. **Run the application:**
 
-python filename.py
-📈 Future Improvements
+```bash
+python main.py
+```
 
-Add stock quantity tracking
+---
 
-Add GST & discount calculation
+## 📈 Future Improvements
 
-Add invoice number & timestamp
+- [ ] Add stock quantity tracking per item
+- [ ] Add GST & discount calculation
+- [ ] Add invoice number & timestamp generation
+- [ ] Save bill output to a `.txt` or `.pdf` file
+- [ ] Convert to an OOP-based design (classes for `Inventory`, `Cart`, `Invoice`)
+- [ ] Refactor repeated input validation into reusable helper functions
 
-Save bill to file
+---
 
-Convert to OOP-based design
-
-Refactor repeated input validation into reusable helper functions
-
-🎯 Learning Outcomes
+## 🎯 Learning Outcomes
 
 This project demonstrates:
 
-Structured CLI architecture
+- Structured CLI architecture with a central controller
+- Clean control flow using functions and return values
+- Data accumulation logic (cart quantity merging)
+- Console output formatting (aligned columns, separators)
+- Proper variable scoping across modules
+- Modular function design with clear responsibilities
 
-Clean control flow
+---
 
-Data accumulation logic
+## 👨‍💻 Author
 
-Console output formatting
+**Saransh Malik**
 
-Proper scope handling
+Developed as a hands-on practice project to strengthen Python fundamentals and system design thinking.
 
-Modular function design
+- 🐙 GitHub: [@SaranshMalik3355](https://github.com/SaranshMalik3355)
 
-👨‍💻 Author
+---
 
-Developed as a hands-on practice project to strengthen Python fundamentals and system design thinking. 
+## 📄 License
+
+This project is licensed under the **MIT License** — free to use, modify, and distribute.
+
+```
+MIT License
+
+Copyright (c) 2025 Saransh Malik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+<p align="center">Made with ❤️ and Python 🐍</p>
